@@ -2355,18 +2355,6 @@ Generate a stream package that sends all intermediary snapshots from the first s
 .ne 2
 .mk
 .na
-\fB\fB-v\fR\fR
-.ad
-.sp .6
-.RS 4n
-Print verbose information about the stream package generated.  This information
-includes a per-second report of how much data has been sent.
-.RE
-
-.sp
-.ne 2
-.mk
-.na
 \fB\fB-R\fR\fR
 .ad
 .sp .6
@@ -2374,6 +2362,18 @@ includes a per-second report of how much data has been sent.
 Generate a replication stream package, which will replicate the specified filesystem, and all descendent file systems, up to the named snapshot. When received, all properties, snapshots, descendent file systems, and clones are preserved.
 .sp
 If the \fB-i\fR or \fB-I\fR flags are used in conjunction with the \fB-R\fR flag, an incremental replication stream is generated. The current values of properties, and current snapshot and file system names are set when the stream is received. If the \fB-F\fR flag is specified when this stream is received, snapshots and file systems that do not exist on the sending side are destroyed. 
+.RE
+
+.sp
+.ne 2
+.mk
+.na
+\fB\fB-v\fR\fR
+.ad
+.sp .6
+.RS 4n
+Print verbose information about the stream package generated.  This information
+includes a per-second report of how much data has been sent.
 .RE
 
 .sp
